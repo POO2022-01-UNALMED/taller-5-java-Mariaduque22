@@ -9,8 +9,13 @@ public class Zoologico {
 	private ArrayList<Zona> zonas =new ArrayList<Zona>();
 	
 	public int cantidadTotalAnimales() {		
-		return 0;
+		int cantidad=0;
+		for (int cant=0; cant<this.zonas.size();cant++) {
+			cantidad +=this.zonas.get(cant).cantidadAnimales();
+		}
+		return cantidad;
 	}
+	
 	public void agregarZonas(Zona zona) { 		/*que vá*/		
 		this.zonas.add(zona);
 	}    

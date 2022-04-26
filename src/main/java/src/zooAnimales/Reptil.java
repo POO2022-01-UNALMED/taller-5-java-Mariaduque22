@@ -1,9 +1,10 @@
 package zooAnimales;
+import java.util.ArrayList;
 
 import gestion.Zona;
 
 public class Reptil extends Animal {
-	private Reptil listado;
+	private static ArrayList <Reptil> listado=new ArrayList<Reptil>();
 	public int iguanas;
 	public int serpientes;
 	private String colorEscamas;
