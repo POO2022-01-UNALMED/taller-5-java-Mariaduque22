@@ -32,6 +32,7 @@ public class Animal {
 	}
 	
 	public Animal() {
+		Animal.totalAnimales +=1;
 	}
 
 	public Animal(String nombre, int edad, String habitat, String genero) {
