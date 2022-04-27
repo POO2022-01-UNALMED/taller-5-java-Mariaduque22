@@ -4,21 +4,21 @@ import java.util.ArrayList;
 import zooAnimales.Animal;
 
 public class Zona {
-	private ArrayList<Animal> animales =new ArrayList<Animal>();
+	private ArrayList<Animal> animales = new ArrayList<Animal>();
 	private String nombre;
 	private Zoologico zoo;
 	
 	
-	public void agregarAnimales(Animal animal) {     
+	public void agregarAnimales(Animal animal) {
 		this.animales.add(animal);
 	}
 	
-	public int cantidadAnimales() {    
+	public int cantidadAnimales() {
 		return this.animales.size();
 	}
 	
 	public Zona() {
-		
+		this(null, null);
 	}
 
 	public Zona(String nombre, Zoologico zoo) {
