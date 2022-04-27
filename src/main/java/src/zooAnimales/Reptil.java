@@ -3,13 +3,15 @@ import java.util.ArrayList;
 
 
 public class Reptil extends Animal {
-	private static ArrayList <Reptil> listado=new ArrayList<Reptil>();
+	private static ArrayList<Reptil> listado = new ArrayList<Reptil>();
 	public static int iguanas;
 	public static int serpientes;
 	private String colorEscamas;
 	private int largoCola;
+
 	
 	public Reptil() {
+		this("", 0, "", "", "", 0);
 	}
 
 
@@ -34,13 +36,16 @@ public class Reptil extends Animal {
 	}
 	
 	public static Reptil crearSerpiente(String nombre, int edad, String genero) {
-		Reptil.serpientes +=1;
-		return new Reptil(nombre, edad, "jungla", genero, "blanco",1);
+		Reptil.serpientes += 1;
+		Reptil animal = new Reptil(nombre, edad, "jungla", genero, "blanco", 1);
+		return animal;
 	}
+
 	
 	public static Reptil crearIguana(String nombre, int edad, String genero) {
-		Reptil.iguanas +=1;
-		return new Reptil(nombre,edad,"humedal",genero,"verde",3);
+		Reptil.iguanas += 1;
+		Reptil animal = new Reptil(nombre, edad, "humedal", genero, "verde", 3);
+		return animal;
 	}
 
 
@@ -51,6 +56,26 @@ public class Reptil extends Animal {
 
 	public static void setListado(ArrayList<Reptil> listado) {
 		Reptil.listado = listado;
+	}
+
+
+	public static int getIguanas() {
+		return iguanas;
+	}
+
+
+	public static void setIguanas(int iguanas) {
+		Reptil.iguanas = iguanas;
+	}
+
+
+	public static int getSerpientes() {
+		return serpientes;
+	}
+
+
+	public static void setSerpientes(int serpientes) {
+		Reptil.serpientes = serpientes;
 	}
 
 
@@ -73,5 +98,8 @@ public class Reptil extends Animal {
 		this.largoCola = largoCola;
 	}
 
+
+
+	
 	
 }

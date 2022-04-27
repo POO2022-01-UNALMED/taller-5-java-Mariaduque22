@@ -18,13 +18,15 @@ public class Animal {
 			 + "Peces: "+ Pez.getListado().size() + "\n"
 			 + "Anfibios: " + Anfibio.getListado().size();
 	}
+
 	
 	@Override
 	public String toString() {
 		if(this.zona != null) {
-			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona.getNombre() + ", en el " + this.zona.getZoo();}
-		else {
-			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero;}
+			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona.getNombre() + ", en el " + this.zona.getZoo();			
+		} else {
+			return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat + " y mi genero es " + this.genero;
+		}
 	}
 	
 	public String movimiento() {
@@ -32,7 +34,7 @@ public class Animal {
 	}
 	
 	public Animal() {
-		Animal.totalAnimales +=1;
+		this("", 0, "", "");
 	}
 
 	public Animal(String nombre, int edad, String habitat, String genero) {
@@ -40,7 +42,7 @@ public class Animal {
 		this.edad = edad;
 		this.habitat = habitat;
 		this.genero = genero;
-		Animal.totalAnimales +=1;
+		Animal.totalAnimales += 1;
 	}
 
 	public static int getTotalAnimales() {

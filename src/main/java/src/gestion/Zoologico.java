@@ -3,30 +3,32 @@ import java.util.ArrayList;
 
 
 public class Zoologico {
-	private ArrayList<Zona> zonas =new ArrayList<Zona>();
 	private String nombre;
 	private String ubicacion;
+	private ArrayList<Zona> zonas = new ArrayList<Zona>();
 	
 	
-	public int cantidadTotalAnimales() {		
-		int cantidad=0;
-		for (int cant=0; cant<this.zonas.size();cant++) {
-			cantidad +=this.zonas.get(cant).cantidadAnimales();
+	public int cantidadTotalAnimales() {
+		int cantidad = 0;
+		for(int cant = 0; cant < this.zonas.size(); cant++) {
+			cantidad += this.zonas.get(cant).cantidadAnimales();
 		}
+		
 		return cantidad;
 	}
+
 	
-	public void agregarZonas(Zona zona) { 		/*que vá*/		
-		this.zonas.add(zona);
-	}    
+	public void agregarZonas(Zona zona) {
+		this.zonas.add(zona);			
+	}   
 	
 	public Zoologico() {
+		this(null, null);
 	}
 	
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
-		
 	}
 	
 	public String getNombre() {

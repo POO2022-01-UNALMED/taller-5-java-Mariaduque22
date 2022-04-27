@@ -3,14 +3,15 @@ import java.util.ArrayList;
 
 
 public class Ave extends Animal {
-	private static ArrayList <Ave> listado = new ArrayList <Ave>();
+	private static ArrayList<Ave> listado = new ArrayList<Ave>();
 	public static int halcones;
 	public static int aguilas;
 	private String colorPlumas;
+
 	
 	public Ave() {
+		this("", 0, "", "", "");
 	}
-
 
 	
 	public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
@@ -34,10 +35,11 @@ public class Ave extends Animal {
 	
 	
 	public static Ave crearHalcon(String nombre, int edad, String genero) {
-		Ave.halcones += 1;
 		Ave animal = new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
+		Ave.halcones += 1;
 		return animal;
 	}
+
 	
 	public static Ave crearAguila(String nombre, int edad, String genero) {
 		Ave animal = new Ave(nombre, edad, "montanas", genero, "blanco");
