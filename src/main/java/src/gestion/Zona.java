@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import zooAnimales.Animal;
 
 public class Zona {
+	private ArrayList<Animal> animales =new ArrayList<Animal>();
 	private String nombre;
 	private Zoologico zoo;
-	private ArrayList<Animal> animales =new ArrayList<Animal>();
+	
 	
 	public void agregarAnimales(Animal animal) {     
 		this.animales.add(animal);
@@ -17,13 +18,12 @@ public class Zona {
 	}
 	
 	public Zona() {
+		
 	}
 
-	public Zona(String nombre, Zoologico zoo, ArrayList<Animal> animales) {
-		super();
+	public Zona(String nombre, Zoologico zoo) {
 		this.nombre = nombre;
 		this.zoo = zoo;
-		this.animales = animales;
 	}
 
 	public String getNombre() {
@@ -50,8 +50,6 @@ public class Zona {
 		this.animales = animales;
 	}
 	
-	
-
 	
 	
 }
